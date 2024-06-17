@@ -1,0 +1,30 @@
+[project]
+name = "try-ibis"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "utahka", email = "utahka.akiba@gmail.com" }
+]
+dependencies = [
+    "ibis-framework[polars]>=9.1.0",
+    "jupyter>=1.0.0",
+    "rich>=13.7.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.9",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/try_ibis"]
